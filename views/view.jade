@@ -1,0 +1,39 @@
+extends layout
+
+block content
+    .jumbotron
+        .homeheader
+            h1= arg_name
+            p #{arg_description}  
+    .well
+        .container
+            .row 
+                for comment in comments
+                    if (comment.acc_id == acc_id)
+                        .left_panel
+                            div(class="panel panel-info")
+                                .panel-heading
+                                    h3(class="panel-title")
+                                        p #{comment.acc_username}
+                                .panel-body
+                                    p #{comment.arc_comment}
+                    else
+                        .right_panel
+                            div(class="panel panel-success")
+                                .panel-heading
+                                    h3(class="panel-title")
+                                        p #{comment.acc_username}
+                                .panel-body
+                                    p #{comment.arc_comment}
+
+    .well
+        div.form_argument
+                form(method="post", role="form", action="/argument/comment")                
+                    label(for="argument" class="label label-default") Insert Your Argument
+                    textarea(id="argument", name="arc_comment", class="form-control") 
+                    input(type="hidden", name="arg_id", value="#{arg_id}")
+                    input(type="hidden", name="acc_id", value="#{account_id}")
+                    input(type="submit",class="btn btn-primary btn-lg", name="Submit")
+
+
+

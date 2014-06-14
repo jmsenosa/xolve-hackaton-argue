@@ -1,0 +1,45 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+a {
+  color: #00b7ff;
+}
+.homeheader {
+  text-align: center;
+}
+.form_wrapper {
+  width: 250px;
+  margin: 0 auto;
+}
+.form_wrapper input {
+  margin-bottom: 5px;
+}
+.form_argument {
+  width: 500px;
+  margin: 50px auto 20px;
+  text-align: center;
+}
+.form_argument label {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.form_argument textarea {
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+.left_panel {
+  float: left;
+  width: 51%;
+}
+.right_panel {
+  float: right;
+  width: 51%;
+}
+.right_panel .panel-title {
+  text-align: right;
+}
+p {
+  line-height: 150%;
+  text-align: justify;
+}
